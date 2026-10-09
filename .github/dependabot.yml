@@ -7,8 +7,3 @@ updates:
     ignore:
       - dependency-name: "@elastic/elastic-eslint-config-kibana"
       - dependency-name: "@elastic/eslint-import-resolver-kibana"
-
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "daily"
