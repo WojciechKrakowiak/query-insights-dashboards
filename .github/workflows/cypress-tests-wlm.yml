@@ -33,19 +33,19 @@ jobs:
       OPENSEARCH_INITIAL_ADMIN_PASSWORD: 'myStrongPassword123!'
     steps:
       - name: Checkout Branch
-        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v3
       - name: Set up JDK
         uses: actions/setup-java@b6e674f4b717d7b0ae3baee0fbe79f498905dfde # v1
         with:
           java-version: 21
       - name: Checkout cypress-test
-        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v2
         with:
           repository: ${{github.repository}}
           path: cypress-test
 
       - name: Checkout OpenSearch
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4
         with:
           path: OpenSearch
           repository: opensearch-project/OpenSearch
@@ -126,7 +126,7 @@ jobs:
           curl -ksu "admin:${OPENSEARCH_INITIAL_ADMIN_PASSWORD}" https://localhost:9200/_wlm/workload_group | jq '.'
 
       - name: Checkout OpenSearch-Dashboards
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4
         with:
           repository: opensearch-project/OpenSearch-Dashboards
           path: OpenSearch-Dashboards
@@ -148,7 +148,7 @@ jobs:
           tail -n 60 "$FILE" || true
 
       - name: Checkout Query Insights Dashboards plugin
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4
         with:
           path: OpenSearch-Dashboards/plugins/query-insights-dashboards
 

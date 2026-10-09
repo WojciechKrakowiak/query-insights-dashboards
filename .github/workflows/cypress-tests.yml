@@ -30,7 +30,7 @@ jobs:
       TERM: xterm
     steps:
 
-      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4
 
       - name: Set env
         run: |
@@ -59,14 +59,14 @@ jobs:
         shell: bash
 
       - name: Checkout Query Insights
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4
         with:
           path: query-insights
           repository: opensearch-project/query-insights
           ref: ${{ env.QUERY_INSIGHTS_BRANCH }}
 
       - name: Checkout OpenSearch
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4
         with:
           path: OpenSearch
           repository: opensearch-project/OpenSearch
@@ -183,14 +183,14 @@ jobs:
 
 
       - name: Checkout OpenSearch-Dashboards
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4
         with:
           repository: opensearch-project/OpenSearch-Dashboards
           path: OpenSearch-Dashboards
           ref: ${{ env.OPENSEARCH_DASHBOARDS_BRANCH }}
 
       - name: Checkout Query Insights Dashboards plugin
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4
         with:
           path: OpenSearch-Dashboards/plugins/query-insights-dashboards
 
